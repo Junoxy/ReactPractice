@@ -4,6 +4,10 @@ import './App.css'
 import Footer from './Footer'
 import lushCardData from '../lushCardData'
 import LushCard from './LushCard'
+import data from '../cardData'
+import Card from './Card'
+
+
 function App() {
   
   const home = {url:"/home", text:"Home"}
@@ -17,13 +21,17 @@ function App() {
     navLinks: links
   }
   
+  const handleCardClick = (title) => {console.log({title})}
 
   return (
     <div className='App'>
       <Navbar { ...propsNavbar } />
 
       <main>
-        <LushCard cardData = {lushCardData} />
+        {/* <LushCard cardData = {lushCardData} /> */}
+        { data.map((card,i) => {
+          return <Card  cardClicked={handleCardClick}  key={i}  title={card.title} > {card.children} </Card>
+        }) }
       </main>
 
       <Footer/>
