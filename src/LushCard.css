@@ -1,0 +1,20 @@
+.LushCard {
+ display: flex;
+ flex-direction: column;
+}
+
+.card-color {
+width: 200px;
+height: 60px;
+border-radius: 5px;
+}
+
+.title{
+    margin: 5px;
+    padding: 0;
+}
+
+.text{
+    margin: 0;
+    padding: 0;
+}
